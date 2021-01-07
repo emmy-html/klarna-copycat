@@ -93,11 +93,68 @@
     color: #000;
     padding: 0.2em 0;
   }
-  
-  /* ==========================================================================
-     Author's custom styles
-     ========================================================================== */
-  
+
+  /* universal styles */ 
+  $body-font: 'Playfair Display', serif;
+  $blue: #4E598C;
+  $white: #fff;
+  $light-orange: #F9C784;
+  $yellow-orange: #FCAF58;
+  $orange: #FF8C42;
+
+  body {
+      background: $blue;
+      color: $blue;
+      font-family: $body-font;
+  }
+  h1 {
+      color: $yellow-orange;
+      font-weight: 900;
+      text-align: center;
+      padding: 10px;
+      span {
+          color: $light-orange;
+      }
+  }
+  .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin: 20px;
+      text-align: center;
+      text-transform: lowercase;
+      article {
+          width: 100px;
+          height: 100px;
+          padding: 10px;
+          animation: move 1s 1;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease;
+          @keyframes move {
+              to {
+                  margin-top: 0px;
+              }
+          }
+          &:nth-of-type(1) {
+              background: $white;
+              margin-top: 20px;
+          }
+          &:nth-of-type(2) {
+              background: $light-orange;
+              margin-top: 30px;
+          }
+          &:nth-of-type(3) {
+              background: $yellow-orange;
+              margin-top: 40px;
+          }
+          &:nth-of-type(4) {
+              background: $orange;
+              margin-top: 50px;
+          }
+      }
+  }
+
   /* ==========================================================================
      Helper classes
      ========================================================================== */

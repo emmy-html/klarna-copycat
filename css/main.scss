@@ -109,11 +109,13 @@
   }
   h1 {
       color: $yellow-orange;
-      font-weight: 900;
-      text-align: center;
       padding: 10px;
+      text-align: center;
+      text-transform: lowercase;
       span {
-          color: $light-orange;
+          color: $white;
+          font-weight: 900;
+          text-transform: none;
       }
   }
   .container {
@@ -130,27 +132,31 @@
           padding: 10px;
           animation: move 1s 1;
           animation-fill-mode: forwards;
-          animation-timing-function: ease;
+          animation-timing-function: ease-in-out;
           @keyframes move {
+            from {
+              opacity: 0;
+            }
               to {
                   margin-top: 0px;
+                  opacity: 1;
               }
           }
           &:nth-of-type(1) {
               background: $white;
-              margin-top: 20px;
+              margin-top: 200px;
           }
           &:nth-of-type(2) {
               background: $light-orange;
-              margin-top: 30px;
+              margin-top: 260px;
           }
           &:nth-of-type(3) {
               background: $yellow-orange;
-              margin-top: 40px;
+              margin-top: 320px;
           }
           &:nth-of-type(4) {
               background: $orange;
-              margin-top: 50px;
+              margin-top: 380px;
           }
       }
   }

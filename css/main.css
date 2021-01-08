@@ -85,11 +85,13 @@ body {
 
 h1 {
   color: #FCAF58;
-  font-weight: 900;
+  padding: 10px;
   text-align: center;
-  padding: 10px; }
+  text-transform: lowercase; }
   h1 span {
-    color: #F9C784; }
+    color: #fff;
+    font-weight: 900;
+    text-transform: none; }
 
 .container {
   display: flex;
@@ -105,22 +107,25 @@ h1 {
     padding: 10px;
     animation: move 1s 1;
     animation-fill-mode: forwards;
-    animation-timing-function: ease; }
+    animation-timing-function: ease-in-out; }
 @keyframes move {
+  from {
+    opacity: 0; }
   to {
-    margin-top: 0px; } }
+    margin-top: 0px;
+    opacity: 1; } }
     .container article:nth-of-type(1) {
       background: #fff;
-      margin-top: 20px; }
+      margin-top: 200px; }
     .container article:nth-of-type(2) {
       background: #F9C784;
-      margin-top: 30px; }
+      margin-top: 260px; }
     .container article:nth-of-type(3) {
       background: #FCAF58;
-      margin-top: 40px; }
+      margin-top: 320px; }
     .container article:nth-of-type(4) {
       background: #FF8C42;
-      margin-top: 50px; }
+      margin-top: 380px; }
 
 /* ==========================================================================
    Helper classes

@@ -118,7 +118,7 @@
           text-transform: none;
       }
   }
-  .fade {
+  .fade { /* animation to give a soft loading effect */ 
     animation: fadeIn 1s ease-in-out 1;
     @keyframes fadeIn {
       from {
@@ -130,7 +130,7 @@
     }
   }
   .container {
-      display: flex;
+      display: flex; /* flex container to show our squares side by side */ 
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
@@ -140,10 +140,10 @@
       text-transform: lowercase;
       width: 70%;
       article {
-          width: 150px;
+          width: 150px; /* the colored squares */ 
           height: 100px;
           padding: 10px;
-          animation: move 1.5s ease-in-out 0s 1 forwards;
+          animation: move 1.5s ease-in-out 0s 1 forwards; /* create an animation called 'move', that will bring each square to the top of the container */
           @keyframes move {
               to {
                   margin-top: 0px;
@@ -151,19 +151,19 @@
           }
           &:nth-of-type(1) {
               background: $white;
-              margin-top: 200px;
+              margin-top: 200px; /* push the square towards the bottom of the screen, the further down, the more dramatic the effect */ 
           }
           &:nth-of-type(2) {
               background: $light-orange;
-              margin-top: 260px;
+              margin-top: 260px; /* push the square further towards the bottom of the screen */
           }
           &:nth-of-type(3) {
               background: $yellow-orange;
-              margin-top: 320px;
+              margin-top: 320px; /* push the square more towards the bottom of the screen */
           }
           &:nth-of-type(4) {
               background: $orange;
-              margin-top: 380px;
+              margin-top: 380px; /* push the square even MORE towards the bottom of the screen */
           }
       }
   }

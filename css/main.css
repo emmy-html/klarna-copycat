@@ -94,6 +94,7 @@ h1 {
     text-transform: none; }
 
 .fade {
+  /* animation to give a soft loading effect */
   animation: fadeIn 1s ease-in-out 1; }
 @keyframes fadeIn {
   from {
@@ -102,6 +103,7 @@ h1 {
     opacity: 1; } }
 .container {
   display: flex;
+  /* flex container to show our squares side by side */
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
@@ -112,24 +114,30 @@ h1 {
   width: 70%; }
   .container article {
     width: 150px;
+    /* the colored squares */
     height: 100px;
     padding: 10px;
-    animation: move 1.5s ease-in-out 0s 1 forwards; }
+    animation: move 1.5s ease-in-out 0s 1 forwards;
+    /* create an animation called 'move', that will bring each square to the top of the container */ }
 @keyframes move {
   to {
     margin-top: 0px; } }
     .container article:nth-of-type(1) {
       background: #fff;
-      margin-top: 200px; }
+      margin-top: 200px;
+      /* push the square towards the bottom of the screen, the further down, the more dramatic the effect */ }
     .container article:nth-of-type(2) {
       background: #F9C784;
-      margin-top: 260px; }
+      margin-top: 260px;
+      /* push the square further towards the bottom of the screen */ }
     .container article:nth-of-type(3) {
       background: #FCAF58;
-      margin-top: 320px; }
+      margin-top: 320px;
+      /* push the square more towards the bottom of the screen */ }
     .container article:nth-of-type(4) {
       background: #FF8C42;
-      margin-top: 380px; }
+      margin-top: 380px;
+      /* push the square even MORE towards the bottom of the screen */ }
 
 /* ==========================================================================
    Helper classes
